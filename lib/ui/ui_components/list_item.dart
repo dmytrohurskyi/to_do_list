@@ -33,10 +33,9 @@ class _ListItemState extends State<ListItem> {
           Text(
             widget.textToShow,
             style: TextStyle(
-              fontSize: 22,
-              color: Colors.white,
-              decoration: isDone ? TextDecoration.lineThrough : null
-            ),
+                fontSize: 22,
+                color: Colors.white,
+                decoration: isDone ? TextDecoration.lineThrough : null),
           ),
         ],
       ),
