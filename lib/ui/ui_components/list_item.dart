@@ -32,9 +32,10 @@ class _ListItemState extends State<ListItem> {
               }),
           Text(
             widget.textToShow,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 22,
               color: Colors.white,
+              decoration: isDone ? TextDecoration.lineThrough : null
             ),
           ),
         ],
