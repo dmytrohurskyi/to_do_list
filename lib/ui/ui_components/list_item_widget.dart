@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list/ui/model/to_do_data_model.dart';
 
 class ListItemWidget extends StatefulWidget {
-  final String textToShow;
+  final ToDo task;
 
-  const ListItemWidget({Key? key, required this.textToShow}) : super(key: key);
+  const ListItemWidget({Key? key, required this.task}) : super(key: key);
 
   @override
   _ListItemWidgetState createState() => _ListItemWidgetState();
 }
 
 class _ListItemWidgetState extends State<ListItemWidget> {
-  bool isDone = false;
-
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -24,18 +23,21 @@ class _ListItemWidgetState extends State<ListItemWidget> {
               fillColor: MaterialStateProperty.resolveWith((states) {
                 return Colors.deepOrange[700];
               }),
-              value: isDone,
+              value: widget.task.isCompleted,
               onChanged: (bool? value) {
                 setState(() {
-                  isDone = value!;
+                  widget.task.isCompleted = value!;
+                  widget.task.save();
                 });
               }),
           Text(
-            widget.textToShow,
+            widget.task.text,
             style: TextStyle(
                 fontSize: 22,
                 color: Colors.white,
-                decoration: isDone ? TextDecoration.lineThrough : null),
+                decoration: widget.task.isCompleted
+                    ? TextDecoration.lineThrough
+                    : null),
           ),
         ],
       ),

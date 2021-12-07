@@ -13,8 +13,8 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("ToDo List"),
         backgroundColor: Colors.deepOrange[700],
-        actions: const [
-          SortPopupMenuWidget()
+        actions: [
+          SortPopupMenuWidget(),
         ],
       ),
       body: const HomeBodyWidget(),

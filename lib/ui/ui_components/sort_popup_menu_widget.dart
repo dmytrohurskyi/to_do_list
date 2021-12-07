@@ -8,14 +8,9 @@ enum _MenuSortingOptions {
   longestToShortest
 }
 
-class SortPopupMenuWidget extends StatefulWidget {
+class SortPopupMenuWidget extends StatelessWidget {
   const SortPopupMenuWidget({Key? key}) : super(key: key);
 
-  @override
-  _SortPopupMenuWidgetState createState() => _SortPopupMenuWidgetState();
-}
-
-class _SortPopupMenuWidgetState extends State<SortPopupMenuWidget> {
   @override
   Widget build(BuildContext context) {
     return PopupMenuButton<_MenuSortingOptions>(
@@ -26,10 +21,10 @@ class _SortPopupMenuWidgetState extends State<SortPopupMenuWidget> {
       onSelected: (_MenuSortingOptions result) {
         switch (result) {
           case _MenuSortingOptions.ascendingOrder:
-            // TODO: Handle this case.
+            // TODO:
             break;
           case _MenuSortingOptions.descendingOrder:
-            // TODO: Handle this case.
+            // TODO:
             break;
           case _MenuSortingOptions.shortestToLongest:
             // TODO: Handle this case.
