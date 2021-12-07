@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:to_do_list/ui/ui_components/add_new_task_fab_widget.dart';
 import 'package:to_do_list/ui/ui_components/home_body_widget.dart';
+import 'package:to_do_list/ui/ui_components/sort_popup_menu_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -12,6 +13,9 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("ToDo List"),
         backgroundColor: Colors.deepOrange[700],
+        actions: const [
+          SortPopupMenuWidget()
+        ],
       ),
       body: const HomeBodyWidget(),
       floatingActionButton: const AddNewTaskFabWidget(),
