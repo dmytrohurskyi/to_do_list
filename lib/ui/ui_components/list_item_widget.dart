@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class ListItem extends StatefulWidget {
+class ListItemWidget extends StatefulWidget {
   final String textToShow;
 
-  const ListItem({Key? key, required this.textToShow}) : super(key: key);
+  const ListItemWidget({Key? key, required this.textToShow}) : super(key: key);
 
   @override
-  _ListItemState createState() => _ListItemState();
+  _ListItemWidgetState createState() => _ListItemWidgetState();
 }
 
-class _ListItemState extends State<ListItem> {
+class _ListItemWidgetState extends State<ListItemWidget> {
   bool isDone = false;
 
   @override

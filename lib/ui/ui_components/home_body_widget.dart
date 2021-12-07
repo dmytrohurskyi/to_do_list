@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:to_do_list/ui/ui_components/list_item.dart';
+import 'package:to_do_list/ui/ui_components/list_item_widget.dart';
 
-class HomeBody extends StatefulWidget {
-  const HomeBody({Key? key}) : super(key: key);
+class HomeBodyWidget extends StatefulWidget {
+  const HomeBodyWidget({Key? key}) : super(key: key);
 
   @override
-  _HomeBodyState createState() => _HomeBodyState();
+  _HomeBodyWidgetState createState() => _HomeBodyWidgetState();
 }
 
-class _HomeBodyState extends State<HomeBody> {
+class _HomeBodyWidgetState extends State<HomeBodyWidget> {
   List toDos = [];
 
   @override
@@ -24,7 +24,7 @@ class _HomeBodyState extends State<HomeBody> {
       itemCount: toDos.length,
       itemBuilder: (_, index) => Dismissible(
         key: Key(toDos[index]),
-        child: ListItem(textToShow: toDos[index]),
+        child: ListItemWidget(textToShow: toDos[index]),
         background: Container(color: Colors.redAccent),
         onDismissed: (_) {
           setState(() {
