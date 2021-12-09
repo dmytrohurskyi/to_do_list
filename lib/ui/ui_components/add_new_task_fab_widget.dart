@@ -13,7 +13,7 @@ class AddNewTaskFabWidget extends StatelessWidget {
     );
   }
 
-  Future<void> _displayTextInputDialog(BuildContext context) async {
+  Future<void> _displayTextInputDialog(BuildContext context) {
     return showDialog(
         context: context,
         builder: (context) {
